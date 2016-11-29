@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FindCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BxY-Yp-IRl">
+                        <rect key="frame" x="5" y="5" width="190" height="120"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="120" id="Ovz-qg-yo7"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房间标题" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8b-2t-TIO">
+                        <rect key="frame" x="10" y="130" width="180" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="U11-9U-X7Y"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在线人数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGG-MV-Upu">
+                        <rect key="frame" x="138" y="99" width="52" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="zeE-jt-mYV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="房主" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COX-eq-EIF">
+                        <rect key="frame" x="10" y="99" width="26" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="zCw-rb-Afp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="bGG-MV-Upu" firstAttribute="bottom" secondItem="BxY-Yp-IRl" secondAttribute="bottom" constant="-5" id="4xB-1l-w8v"/>
+                <constraint firstAttribute="trailing" secondItem="j8b-2t-TIO" secondAttribute="trailing" constant="10" id="BT6-yW-JZT"/>
+                <constraint firstItem="bGG-MV-Upu" firstAttribute="trailing" secondItem="BxY-Yp-IRl" secondAttribute="trailing" constant="-5" id="D22-pn-6OE"/>
+                <constraint firstItem="j8b-2t-TIO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="SaA-Og-lRk"/>
+                <constraint firstItem="BxY-Yp-IRl" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="crC-Mi-nYg"/>
+                <constraint firstItem="BxY-Yp-IRl" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="mCr-Iw-ne7"/>
+                <constraint firstAttribute="trailing" secondItem="BxY-Yp-IRl" secondAttribute="trailing" constant="5" id="pyV-Cn-35b"/>
+                <constraint firstItem="COX-eq-EIF" firstAttribute="bottom" secondItem="BxY-Yp-IRl" secondAttribute="bottom" constant="-5" id="sj0-wv-RhN"/>
+                <constraint firstItem="COX-eq-EIF" firstAttribute="leading" secondItem="BxY-Yp-IRl" secondAttribute="leading" constant="5" id="tWL-gu-z8a"/>
+                <constraint firstItem="j8b-2t-TIO" firstAttribute="top" secondItem="BxY-Yp-IRl" secondAttribute="bottom" constant="5" id="zDx-Py-JmZ"/>
+            </constraints>
+            <connections>
+                <outlet property="iconImageView" destination="BxY-Yp-IRl" id="aHg-in-eta"/>
+                <outlet property="onlineLabel" destination="bGG-MV-Upu" id="9jM-iy-8x4"/>
+                <outlet property="ownerLabel" destination="COX-eq-EIF" id="Fwt-OT-bHu"/>
+                <outlet property="titleLabel" destination="j8b-2t-TIO" id="5cj-Zo-Cdo"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="183"/>
+        </collectionViewCell>
+    </objects>
+</document>

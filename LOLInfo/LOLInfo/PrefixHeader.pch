@@ -1,0 +1,74 @@
+//
+//  PrefixHeader.pch
+//  LOLInfo
+//
+//  Created by 刘硕 on 16/6/27.
+//  Copyright © 2016年 刘硕. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+
+#import "AFNetworking.h"//网络请求
+#import "UIKit+AFNetworking.h"//封装了与网络相关的常用功能
+#import "MJRefresh.h"
+#import "HttpRequest.h"
+
+//直播列表接口
+#define MAIN_URL @"http://capi.douyucdn.cn/api/v1/channel?aid=ios&client_sys=ios&limit=4&time=1456752720&auth=c0a6170a754ca187e8a52a3343ecf273"
+//播放界面网址
+#define URLSTRING_Room @"http://capi.douyucdn.cn/api/v1/room/%@?aid=android&clientsys=android&time=%ld&auth=%@"
+
+//新闻模块
+//最新
+#define kLatestNewsUrlString @"http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=207&page=%d"
+//活动
+#define kS4UrlString @"http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=215&page=%d"
+//赛事
+#define kMatchUrlStirng @"http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=216&page=%d"
+//神贴
+#define kGreatUrlString @"http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=212&page=%d"
+//美女
+#define kBeautifulGirlUrlString @"http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=210&page=%d"
+//囧图
+#define kLolPictureUrlString @"http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=213&page=%d"
+//攻略
+#define kStrategyUrlString @"http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=214&page=%d"
+//官方
+#define kOfficialUrlString @"http://lol.data.shiwan.com/getArticleListImprove/?cid_rel=211&page=%d"
+//新闻详细
+#define kNewsDetailUrlString @"http://lol.data.shiwan.com/getArticleInfo/loldata?article_id=%@"
+//装备物品
+#define kEquipmentUrlString @"http://lol.data.shiwan.com/lolItemFilter/lolvideo?index=99"
+//召唤师技能
+#define kSkillUrlString @"http://lol.data.shiwan.com/lolSpell"
+//召唤师详情  web   server  player
+#define kPlayerUrlString @"http://lolbox.duowan.com/phone/playerDetail.php?sn=%@&target=%@&from=search&sk=398723%254019T"
+//json 召唤师详情  player  server
+#define kJasonPlayerUrlString @"http://115.29.206.154:8080/LOL_Query/service/ZDLQuery?playerName=%@&serverName=%@"
+//英雄模块
+//全部英雄
+#define kAllHeroUrlString @"http://lol.data.shiwan.com/lolHeros/?filter=&type=all"
+//本周免费英雄
+#define kFreeHeroUrlString @"http://lol.data.shiwan.com/lolHeros/?filter=&type=free"
+//英雄详情
+#define kHeroDetailInfoUrlString @"http://lol.data.shiwan.com/lolHeroInfo/?id=%@"
+//英雄出装
+#define kHeroEquipmentUrlString @"http://db.duowan.com/lolcz/img/ku11/api/lolcz.php?championName=%@&limit=7"
+//装备图片
+#define kEquipmentImageUrlString @"http://img.lolbox.duowan.com/zb/%@_64x64.png"
+//英雄技能
+#define kSkillImageUrlString @"http://img.lolbox.duowan.com/abilities/%@_%@_64x64.png"
+
+#endif /* PrefixHeader_pch */
+
+
+
+
+
